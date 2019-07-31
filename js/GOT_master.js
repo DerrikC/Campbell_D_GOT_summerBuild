@@ -8,6 +8,8 @@
 		 bannerImages = document.querySelector("#houseImages"),
 		 houseName = document.querySelector('#house-name'),
 		 houseContent = document.querySelector('.house-info');
+		 pauseButton = document.querySelector('.fa-pause');
+
 
 			const houseData = [
 			["stark", `House Stark of Winterfell is a Great House of Westeros, ruling over the vast region known as the North from their seat in Winterfell. It is one of the oldest lines of Westerosi nobility by far, claiming a line of descent stretching back over eight thousand years. Before the Targaryen conquest, as well as during the War of the Five Kings and Daenerys Targaryen's invasion of Westeros, the leaders of House Stark ruled over the region as the Kings in the North.`],
@@ -23,10 +25,33 @@
 			["arryn", `House Arryn of the Eyrie is one of the Great Houses of Westeros. It has ruled over the Vale of Arryn for millennia, originally as the Kings of Mountain and Vale and more recently as Lords Paramount of the Vale and Wardens of the East under the Targaryen kings and Baratheon-Lannister kings. The nominal head of House Arryn is Robin Arryn, the Lord of the Eyrie, with his stepfather Petyr Baelish acting as Lord Protector until he reaches the age of majority. `]
 			];
 
+//pause the vid on click
+
+function pauseVideo() {
+	houseVideo.pause();
+}
+
+//write the other functions for the custom video controls play, volume, time counter, progress scrubber
 	 function popLightBox() {
 
 			lightBox.classList.add('show-lightbox');
+			// grab a reference to the current video via the className
+			//debugger;
+			// grab reference
+			// get className property
+			//
 
+			let houseName = this.className.split(" ")[1];
+			// use javaascript string interpolation to build the path
+
+			//capitalize the first letter with javascript strinf=g
+			houseName = houseName.charAt(0).toUpperCase() + houseName.slice(1);
+
+			let videoPath = `video/House-${houseName}.mp4`;
+
+			//load this new video videoPath
+			houseVideo.src = videoPath;
+			houseVideo.load();
 			houseVideo.play();
 		}
 
@@ -37,6 +62,9 @@
 		houseVideo.currentTime = 0;    //this will rewind the video
 		houseVideo.pause();
 	}
+
+
+
 
 				function animateBanners(){
 					// offset is needed  so that we can multiply
@@ -56,11 +84,13 @@
 
 
 				sigils.forEach(sigil => sigil.addEventListener("click", animateBanners));
-
+					sigils.forEach(sigil => sigil.addEventListener("click", popLightBox));
 
 
 				closeButton.addEventListener("click", closeLightBox);
 
 				houseVideo.addEventListener('ended', closeLightBox);
+
+				pauseButton.addEventListener('click', pauseVideo);
 
 	})();

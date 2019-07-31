@@ -118,21 +118,27 @@ main {
 
 .close-lightbox {
   float: right;
-  right:20px;
+  right: 20px;
   color: white;
 }
 
-
+/*
 video {
 	width: 80%;
 	margin-top: 10% auto 10% auto;
 	border: thin solid #949393;
   display: block;
-}
+} */
 
 video {
   width: 80%;
   margin-top: 10%;
   border: thin solid #949393;
+  display: block;
+}
 
+.video-controls i {
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
 }

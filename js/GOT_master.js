@@ -9,6 +9,9 @@
 		 houseName = document.querySelector('#house-name'),
 		 houseContent = document.querySelector('.house-info');
 		 pauseButton = document.querySelector('.fa-pause');
+		 playButton = document.querySelector('.fa-play-circle');
+		 rewindButton = document.querySelector('.fa-fast-backward')
+
 
 
 			const houseData = [
@@ -22,7 +25,11 @@
 				//[  4  ]       [  0  ] [4]           [1]
 			["greyjoy", `House Greyjoy of Pyke is one of the Great Houses of Westeros. It rules over the Iron Islands, a harsh and bleak collection of islands off the west coast of Westeros, from the castle at Pyke. The head of the house is the Lord Reaper of Pyke.`],
 
-			["arryn", `House Arryn of the Eyrie is one of the Great Houses of Westeros. It has ruled over the Vale of Arryn for millennia, originally as the Kings of Mountain and Vale and more recently as Lords Paramount of the Vale and Wardens of the East under the Targaryen kings and Baratheon-Lannister kings. The nominal head of House Arryn is Robin Arryn, the Lord of the Eyrie, with his stepfather Petyr Baelish acting as Lord Protector until he reaches the age of majority. `]
+			["frey", `House Arryn of the Eyrie is one of the Great Houses of Westeros. It has ruled over the Vale of Arryn for millennia, originally as the Kings of Mountain and Vale and more recently as Lords Paramount of the Vale and Wardens of the East under the Targaryen kings and Baratheon-Lannister kings. The nominal head of House Arryn is Robin Arryn, the Lord of the Eyrie, with his stepfather Petyr Baelish acting as Lord Protector until he reaches the age of majority. `],
+
+			["targaryen", `House Arryn of the Eyrie is one of the Great Houses of Westeros. It has ruled over the Vale of Arryn for millennia, originally as the Kings of Mountain and Vale and more recently as Lords Paramount of the Vale and Wardens of the East under the Targaryen kings and Baratheon-Lannister kings. The nominal head of House Arryn is Robin Arryn, the Lord of the Eyrie, with his stepfather Petyr Baelish acting as Lord Protector until he reaches the age of majority. `],
+
+			["tyrell", `House Arryn of the Eyrie is one of the Great Houses of Westeros. It has ruled over the Vale of Arryn for millennia, originally as the Kings of Mountain and Vale and more recently as Lords Paramount of the Vale and Wardens of the East under the Targaryen kings and Baratheon-Lannister kings. The nominal head of House Arryn is Robin Arryn, the Lord of the Eyrie, with his stepfather Petyr Baelish acting as Lord Protector until he reaches the age of majority. `]
 			];
 
 //pause the vid on click
@@ -31,6 +38,13 @@ function pauseVideo() {
 	houseVideo.pause();
 }
 
+function playVideo() {
+	houseVideo.play();
+}
+
+function rewindVideo() {
+		houseVideo.load();
+}
 //write the other functions for the custom video controls play, volume, time counter, progress scrubber
 	 function popLightBox() {
 
@@ -93,4 +107,7 @@ function pauseVideo() {
 
 				pauseButton.addEventListener('click', pauseVideo);
 
+				playButton.addEventListener('click', playVideo);
+
+				rewindButton.addEventListener('click', rewindVideo);
 	})();

@@ -3,7 +3,7 @@
 /* ----- custom font ----- */
 @font-face {
     font-family: 'GOT_font';
-    src: url('Game_of_Thrones.ttf') format('truetype');
+    src: url('https://Game_of_Thrones.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -36,7 +36,7 @@ main {
 	overflow:hidden;
 }
 
-#houseImages { position:relative; width:4000px; transition: all .5s; }
+#houseImages { position:relative; width:5800px; transition: all .5s; } /*make width bigger to fit images*/
 #houseImages img { float:left; }
 
 .house-info{
@@ -48,8 +48,9 @@ main {
 #navList li {
 	display:inline;
 	list-style-type:none;
-	padding:0px 10px;
+	padding:0px 4px;
 	cursor:pointer;
+
 }
 
 /* ----- end default styles ----- */
@@ -84,6 +85,17 @@ main {
 
 .arryn { background-position:-253px -54px; }
 .arryn:hover { background-position:-253px 0px; }
+
+.frey { background-position:-304px -54px; }
+.frey:hover { background-position:-304px 0px; }
+
+.targaryen { background-position:-355px -54px; }
+.targaryen:hover { background-position:-355px 0px; }
+
+.tyrell { background-position:-406px -54px; }
+.tyrell:hover { background-position:-406px 0px; }
+
+
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
@@ -106,7 +118,7 @@ main {
   width: 100%;
   height: 100vh;
   position: fixed;
-  top:0;
+  top: 0;
   background-color: rgba(0,0,0,0.8);
   display: none;
 
@@ -114,31 +126,39 @@ main {
 
 .show-lightbox {
   display: block;
+  left: 0;
+}
+
+.lightbox .show-lightbox {
+  justify-content: center;
 }
 
 .close-lightbox {
   float: right;
   right: 20px;
   color: white;
+
 }
 
-/*
 video {
-	width: 80%;
-	margin-top: 10% auto 10% auto;
-	border: thin solid #949393;
-  display: block;
-} */
-
-video {
-  width: 80%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10%;
   border: thin solid #949393;
   display: block;
 }
+/* video {
+  width: 90%;
+  margin-top: 10% auto 10% auto;
+  border: thin solid #949393;
+  display: block;
+} */
+
 
 .video-controls i {
   color: white;
   font-size: 2em;
   cursor: pointer;
+  padding: 30px;
 }

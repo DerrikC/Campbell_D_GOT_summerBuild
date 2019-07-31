@@ -1,59 +1,91 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>GOT | Game of Thrones</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-<link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
-<link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
+  <meta charset="UTF-8">
+  <title>GOT | Game of Thrones</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+  <link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
 <body>
-    <main>
+  <main>
 
     <section id="imageContainer">
-    	<div id="houseImages" style="right:0"><!-- add in all of the images to make a scrolling "banner" -->
-    		<img src="images/stark.jpg"/>
-    		<img src="images/baratheon.jpg"/>
-    		<img src="images/lannister.jpg"/>
-    		<img src="images/tully.jpg"/>
-    		<img src="images/greyjoy.jpg"/>
-    		<img src="images/arryn.jpg"/>
-        </div>
+      <div id="houseImages" style="right:0">
+        <!-- add in all of the images to make a scrolling "banner" -->
+        <img src="images/stark.jpg" alt="stark"/>
+        <img src="images/baratheon.jpg" alt="baratheon"/>
+        <img src="images/lannister.jpg" alt="lannister" />
+        <img src="images/tully.jpg" alt="tully"/>
+        <img src="images/greyjoy.jpg" alt="greyjoy" />
+        <img src="images/arryn.jpg" alt="arryn" />
+        <img src="images/stark.jpg" alt="frey"/>
+        <img src="images/greyjoy.jpg"alt="targaryen"/>
+        <img src="images/stark.jpg" alt="tyrell" />
+
+      </div>
     </section>
 
     <nav id="bottomNav">
-    	<ul id="navList">
-        	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
-            <li><div class="sigilContainer stark" data-offset="0"></div></li>
-            <li><div class="sigilContainer baratheon" data-offset="1"></div></li>
-            <li><div class="sigilContainer lannister" data-offset="2"></div></li>
-            <li><div class="sigilContainer tully" data-offset="3"></div></li>
-            <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
-            <li><div class="sigilContainer arryn" data-offset="5"></div></li>
-        </ul>
+      <ul id="navList">
+        <!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
+        <li>
+          <div class="sigilContainer stark" data-offset="0"></div>
+        </li>
+        <li>
+          <div class="sigilContainer baratheon" data-offset="1"></div>
+        </li>
+        <li>
+          <div class="sigilContainer lannister" data-offset="2"></div>
+        </li>
+        <li>
+          <div class="sigilContainer tully" data-offset="3"></div>
+        </li>
+        <li>
+          <div class="sigilContainer greyjoy" data-offset="4"></div>
+        </li>
+        <li>
+          <div class="sigilContainer arryn" data-offset="5"></div>
+        </li>
+        <li>
+          <div class="sigilContainer frey" data-offset="6"></div>
+        </li>
+        <li>
+          <div class="sigilContainer targaryen" data-offset="7"></div>
+        </li>
+        <li>
+          <div class="sigilContainer tyrell" data-offset="8"></div>
+        </li>
+      </ul>
     </nav>
 
-    <h1 id="house-name">clever tagline goes here</h1><!-- replace this with the house name -->
+    <h1 id="house-name">Welcome to Game of Thrones</h1><!-- replace this with the house name -->
 
     <p class="house-info"></p><!-- replace this with house details (github gist) -->
 
-   <section class="lightbox">
-        <a href="#" class="close-lightbox">X</a>
+    <section class="lightbox">
 
-        <section class="video-controls">
-        <h5>custom vid controls</h5>
+
+      <a href="#" class="close-lightbox"><i class="far fa-window-close"></i></a>
+      <video class ="house-video" src="video/HouseStark.mp4" type="video/mp4"></video>
+
+      <section class="video-controls">
+        <h5></h5>
         <i class="far fa-play-circle"></i>
         <i class="fas fa-pause"></i>
+        <i class="fas fa-fast-backward"></i>
+      </section>
 
-        </section>
-        <video class="house-video" src="video/HouseStark.mp4" type="video/mp4"></video>
-        <!-- <video class="house-video" src="video/House-Stark.mp4" type="video/mp4"></video> -->
+      <!-- <video class="house-video" src="video/House-Stark.mp4" type="video/mp4"></video> -->
     </section>
 
 
-</main>  <!--end mainContainer-->
+  </main>
+  <!--end mainContainer-->
 
-<script src="js/GOT_master.js"></script>
+  <script src="js/GOT_master.js"></script>
 </body>
+
 </html>

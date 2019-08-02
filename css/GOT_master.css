@@ -162,3 +162,35 @@ video {
   cursor: pointer;
   padding: 30px;
 }
+
+/*Custom GOT buttons, to match style */
+.playGOT {
+  width: 40px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.pauseGOT {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.rewindGOT {
+  width: 40px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.muteGOT {
+  width: 40px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.volumeGOT {
+  width: 40px;
+  cursor: pointer;
+  padding: 20px;
+}

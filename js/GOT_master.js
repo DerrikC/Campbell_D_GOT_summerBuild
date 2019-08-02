@@ -8,9 +8,11 @@
 		 bannerImages = document.querySelector("#houseImages"),
 		 houseName = document.querySelector('#house-name'),
 		 houseContent = document.querySelector('.house-info');
-		 pauseButton = document.querySelector('.fa-pause');
-		 playButton = document.querySelector('.fa-play-circle');
-		 rewindButton = document.querySelector('.fa-fast-backward')
+		 pauseButton = document.querySelector('.pauseGOT');
+		 playButton = document.querySelector('.playGOT');
+		 rewindButton = document.querySelector('.rewindGOT');
+		 muteButton = document.querySelector('.muteGOT');
+		 soundOnButton = document.querySelector('.volumeGOT');
 
 
 
@@ -44,6 +46,14 @@ function playVideo() {
 
 function rewindVideo() {
 		houseVideo.load();
+}
+
+function muteVideo() {
+		houseVideo.volume = 0.0;
+}
+
+function playSound() {
+		houseVideo.volume = 1.0;
 }
 //write the other functions for the custom video controls play, volume, time counter, progress scrubber
 	 function popLightBox() {
@@ -110,4 +120,9 @@ function rewindVideo() {
 				playButton.addEventListener('click', playVideo);
 
 				rewindButton.addEventListener('click', rewindVideo);
+
+				muteButton.addEventListener('click', muteVideo);
+
+				soundOnButton.addEventListener('click', playSound);
+
 	})();

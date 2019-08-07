@@ -115,7 +115,7 @@ main {
 }
 /*house info text*/
 .house-info {
-  padding: 0px 250px 0px 250px;
+  padding: 0px 10px 0px 10px;
 }
 
 /* add styles here for lightbox and video */
@@ -156,13 +156,6 @@ video {
   border: thin solid #949393;
   display: block;
 }
-/* video {
-  width: 90%;
-  margin-top: 10% auto 10% auto;
-  border: thin solid #949393;
-  display: block;
-} */
-
 
 .video-controls i {
   color: white;

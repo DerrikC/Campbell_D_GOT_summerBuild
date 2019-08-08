@@ -3,7 +3,7 @@
 /* ----- custom font ----- */
 @font-face {
     font-family: 'GOT_font';
-    src: url('https://Game_of_Thrones.ttf') format('truetype');
+    src: url('Game_of_Thrones.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,8 +14,10 @@ body { background-image:url(../images/grungeBG.jpg);
 	background-repeat:no-repeat; background-position:center center;
 	background-color:#000000; font-size:16px; }
 
+
+
 h1 {
-	font-family: 'GOT_font';
+	font-family: 'GOT_font', 'Cinzel', serif;
 	color:white;
 	margin-top:30px;
 	font-size:1.25em;
@@ -33,13 +35,14 @@ main {
 	height:360px;
 	background-color:grey;
 	margin:0 auto;
-	overflow:hidden;
+	overflow: hidden;
 }
 
 #houseImages { position:relative; width:5800px; transition: all .5s; } /*make width bigger to fit images*/
 #houseImages img { float:left; }
 
-.house-info{
+
+.house-info {
   color:white;
 }
 
